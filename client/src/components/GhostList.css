@@ -1,0 +1,169 @@
+.ghost-list {
+  animation: slideIn 0.3s ease-in;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #b8860b;
+  font-size: 1.2em;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0;
+}
+
+th {
+  background: linear-gradient(135deg, #2a2a3e 0%, #1a1a2e 100%);
+  color: #d4af37;
+  padding: 15px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #d4af37;
+  position: sticky;
+  top: 0;
+}
+
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #444;
+  color: #e0e0e0;
+}
+
+tr:hover {
+  background: rgba(212, 175, 55, 0.05);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.85em;
+  font-weight: bold;
+}
+
+.story-cell {
+  max-width: 200px;
+  word-break: break-word;
+}
+
+.actions-cell {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-edit, .btn-delete, .btn-save, .btn-cancel {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.btn-edit {
+  background: #2d5016;
+  color: #90ee90;
+}
+
+.btn-edit:hover {
+  background: #3d6b1f;
+}
+
+.btn-delete {
+  background: #c41e3a;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #a01830;
+}
+
+.btn-save {
+  background: #4caf50;
+  color: white;
+}
+
+.btn-save:hover {
+  background: #45a049;
+}
+
+.btn-cancel {
+  background: #666;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background: #555;
+}
+
+td input,
+td textarea,
+td select {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #d4af37;
+  border-radius: 3px;
+  background: #2a2a3e;
+  color: #e0e0e0;
+  font-family: inherit;
+}
+
+td input:focus,
+td textarea:focus,
+td select:focus {
+  outline: none;
+  box-shadow: 0 0 6px rgba(212, 175, 55, 0.5);
+}
+
+@media (max-width: 1024px) {
+  th, td {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  .story-cell {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  table {
+    font-size: 0.85em;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+
+  .actions-cell {
+    flex-direction: column;
+  }
+
+  .btn-edit, .btn-delete, .btn-save, .btn-cancel {
+    width: 100%;
+  }
+}

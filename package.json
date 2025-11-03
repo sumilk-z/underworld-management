@@ -1,0 +1,20 @@
+{
+  "name": "underworld-system",
+  "version": "1.0.0",
+  "description": "地府管理系统 - 融合传统文化与现代管理",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && node index.js",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2",
+    "uuid": "^9.0.0",
+    "concurrently": "^8.2.0"
+  }
+}
